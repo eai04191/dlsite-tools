@@ -4,6 +4,7 @@
 // @version      0.1
 // @description  DLsiteのアフィリエイトリンクをどこでも作れる便利なやつ
 // @author       eai04191
+// @license      MIT
 // @match        http://www.dlsite.com/home/*
 // @match        http://www.dlsite.com/soft/*
 // @match        http://www.dlsite.com/comic/*
