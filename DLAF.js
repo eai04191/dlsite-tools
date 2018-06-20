@@ -5,6 +5,7 @@
 // @description  DLsiteのアフィリエイトリンクをどこでも作れる便利なやつ
 // @author       eai04191
 // @license      MIT
+// @supportURL   https://github.com/eai04191/DLsiteAffiliateFormatter/issues
 // @match        http://www.dlsite.com/home/*
 // @match        http://www.dlsite.com/soft/*
 // @match        http://www.dlsite.com/comic/*
