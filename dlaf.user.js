@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DLsite Affiliate Formatter
 // @namespace    http://mizle.net/
-// @version      0.1
+// @version      0.1.1
 // @description  DLsiteのアフィリエイトリンクをどこでも作れる便利なやつ
 // @author       eai04191
 // @license      MIT
