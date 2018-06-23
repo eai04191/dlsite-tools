@@ -21,9 +21,9 @@
 // ==/UserScript==
 
 (function () {
-  'use strict';
+  "use strict";
 
-  const affiliateID = 'eai04191';
+  const affiliateID = "eai04191";
 
   function headerInjection() {
     let header = document.getElementsByClassName("eisysGroupHeaderAccount")[0];
@@ -32,7 +32,7 @@
 
     let category = URL.match(/dlsite.com\/(home|soft|comic|maniax|pro|books|girls|girls-pro|gay|eng|ecchi-eng)\//)[1];
 
-    let affiliateURL = '';
+    let affiliateURL = "";
     if (/work\/=\/product_id\//.test(URL)) {
       // 作品ページ
       let workID = URL.match(/(..\d{6})/)[1];
@@ -42,15 +42,15 @@
       affiliateURL = `http://www.dlsite.com/${category}/dlaf/=/aid/${affiliateID}/url/${encodeURIComponent(URL)}`;
     }
 
-    let tweetURLBase = `https://twitter.com/intent/tweet?text=`;
-    let tweetText = `${title} ${affiliateURL}`
+    let tweetURLBase = "https://twitter.com/intent/tweet?text=";
+    let tweetText = `${title} ${affiliateURL}`;
 
     let injectionHTML = `
 <li class="eisysGroupHeaderService-link type-dlsite" id="dlaf">
 <a href="${tweetURLBase + encodeURIComponent(tweetText)}" target="_blank" id="dlaf-tweet">ツイート</a>
 <a href="#" id="dlaf-copy-url">URLコピー</a>
 <a href="#" id="dlaf-copy-md">MDコピー</a>
-</li>`
+</li>`;
     header.innerHTML = injectionHTML + header.innerHTML;
 
     document.getElementById("dlaf-copy-url").onclick = function () {
