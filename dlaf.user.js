@@ -1,7 +1,7 @@
 // ==UserScript==
 // @name         DLsite Affiliate Formatter
 // @namespace    http://mizle.net/
-// @version      0.1.1
+// @version      0.1.2
 // @description  DLsiteのアフィリエイトリンクをどこでも作れる便利なやつ
 // @author       eai04191
 // @license      MIT
@@ -35,7 +35,7 @@
     let affiliateURL = '';
     if (/work\/=\/product_id\//.test(URL)) {
       // 作品ページ
-      let workID = URL.match(/(..\d+).html/)[1];
+      let workID = URL.match(/(..\d{6})/)[1];
       affiliateURL = `http://www.dlsite.com/${category}/dlaf/=/link/work/aid/${affiliateID}/id/${workID}.html`;
     } else {
       // 作品以外のページ
