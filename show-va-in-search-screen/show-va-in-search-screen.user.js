@@ -3,9 +3,10 @@
 // @namespace    mizle.net
 // @version      0.1
 // @author       Eai
+// @license      MIT
+// @supportURL   https://github.com/eai04191/dlsite-tools/issues
 // @match        https://www.dlsite.com/*/fsr/*
 // @match        https://www.dlsite.com/*/campaign/*
-// @grant        none
 // ==/UserScript==
 
 (function() {
