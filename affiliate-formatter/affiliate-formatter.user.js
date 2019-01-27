@@ -1,29 +1,19 @@
 // ==UserScript==
 // @name         DLsite Affiliate Formatter
-// @namespace    http://mizle.net/
-// @version      0.1.2
 // @description  DLsiteのアフィリエイトリンクをどこでも作れる便利なやつ
-// @author       eai04191
+// @namespace    mizle.net
+// @version      0.2
+// @author       Eai
 // @license      MIT
-// @supportURL   https://github.com/eai04191/DLsiteAffiliateFormatter/issues
-// @match        http://www.dlsite.com/home/*
-// @match        http://www.dlsite.com/soft/*
-// @match        http://www.dlsite.com/comic/*
-// @match        http://www.dlsite.com/maniax/*
-// @match        http://www.dlsite.com/pro/*
-// @match        http://www.dlsite.com/books/*
-// @match        http://www.dlsite.com/girls/*
-// @match        http://www.dlsite.com/girls-pro/*
-// @match        http://www.dlsite.com/gay/*
-// @match        http://www.dlsite.com/eng/*
-// @match        http://www.dlsite.com/ecchi-eng/*
-// @grant        none
+// @supportURL   https://github.com/eai04191/dlsite-tools/issues
+// @match        https://www.dlsite.com/*
 // ==/UserScript==
 
 (function () {
   "use strict";
 
   const affiliateID = "eai04191";
+  const mastodonHost = "stellaria.network";
 
   function headerInjection() {
     let header = document.getElementsByClassName("eisysGroupHeaderAccount")[0];
@@ -43,11 +33,13 @@
     }
 
     let tweetURLBase = "https://twitter.com/intent/tweet?text=";
+    let tootURLBase = `https://${mastodonHost}/share?text=`;
     let tweetText = `${title} ${affiliateURL}`;
 
     let injectionHTML = `
 <li class="eisysGroupHeaderService-link type-dlsite" id="dlaf">
 <a href="${tweetURLBase + encodeURIComponent(tweetText)}" target="_blank" id="dlaf-tweet">ツイート</a>
+<a href="${tootURLBase + encodeURIComponent(tweetText)}" target="_blank" id="dlaf-tweet">トゥート</a>
 <a href="#" id="dlaf-copy-url">URLコピー</a>
 <a href="#" id="dlaf-copy-md">MDコピー</a>
 </li>`;
