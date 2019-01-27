@@ -1,22 +1,12 @@
-DLsite Affiliate Formatter
-===
+# DLsite Tools
 
+DLsiteを拡張するUserscriptやUserstyle。
 
-## 機能
+## Userscript
 
-ページ右上にアフィリエイトリンクツイート・コピー・Markdownコピーできるリンクを追加する
+- [Affiliate Formatter](affiliate-formatter/README.md)
+  - アフィリエイトリンクを貼りやすくする。
 
-![スクリーンショット](https://i.imgur.com/bsVzqSl.png)
+## License
 
-![Tweet](https://i.imgur.com/SnE6xol.png)
-
-
-## 設定
-
-1. 26行目のアフィリエイトIDを自分のものに変更する。
-2. 使う。
-
-
-## ライセンス
-
- MIT
+MIT
