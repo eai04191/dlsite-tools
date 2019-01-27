@@ -8,6 +8,10 @@
 
 ![Tweet](https://i.imgur.com/SnE6xol.png)
 
+## インストール
+
+[affiliate-formatter.user.js](affiliate-formatter.user.js)
+
 ## 設定
 
 1. 26 行目のアフィリエイト ID を自分のものに変更する。
